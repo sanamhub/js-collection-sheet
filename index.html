@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CollectionSheetMaking</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div style="padding-left: 30px; padding-right: 30px; padding-top: 30px">
+      <h2>Purchase sheet</h2>
+      <p>Please fill up the required fields</p>
+      <form>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="addProductName" class="form-label"></label>
+              <input
+                id="addProductName"
+                type="text"
+                class="form-control"
+                autofocus
+              />
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-group">
+              <label for="addQuantity" class="form-label">Quantity</label>
+              <input
+                id="addQuantity"
+                type="number"
+                class="form-control"
+                value="0"
+              />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="addRate" class="form-label">Rate</label>
+              <input
+                id="addRate"
+                type="number"
+                class="form-control"
+                value="0"
+              />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="addTotal" class="form-label">Total</label>
+              <input
+                id="addTotal"
+                type="number"
+                class="form-control"
+                autofocus
+                disabled
+                value="0"
+              />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="addSupplier" class="form-label">Supplier</label>
+              <input
+                id="addSupplier"
+                type="text"
+                class="form-control"
+                autofocus
+              />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group d-grid">
+              <label>&nbsp;</label>
+              <input
+                type="submit"
+                value="Add product"
+                onclick="addRow();"
+                class="btn btn-primary btn-block"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <br />
+
+      <table id="tbl" class="table table-sm table-hover table-condensed">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+            <th>Total</th>
+            <th>Supplier</th>
+            <th class="text-right">Action</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+
+      <br />
+
+      <form action="post">
+        <div class="row">
+          <div class="col-md-1">
+            <div class="form-group">
+              <label for="saveCount" class="form-label">Count</label>
+              <input
+                id="saveCount"
+                type="text"
+                class="form-control"
+                autofocus
+                disabled
+                value="0"
+              />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="saveTotal" class="form-label">Total Amount</label>
+              <input
+                id="saveTotal"
+                type="text"
+                class="form-control"
+                disabled
+                value="0"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="saveTxnBy" class="form-label">Transaction By</label>
+              <input id="saveTxnBy" type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="saveRemarks" class="form-label">Remarks</label>
+              <input id="saveRemarks" type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group d-grid">
+              <label>&nbsp;</label>
+              <input
+                type="submit"
+                value="Save all"
+                onclick="return confirm('Are you sure?')"
+                class="btn btn-primary btn-block"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+<!-- https://www.tutorialrepublic.com/html-tutorial/html-tables.php -->
