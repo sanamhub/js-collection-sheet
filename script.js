@@ -75,3 +75,4 @@ let rate = document.querySelector("#addRate");
 
 quantity.addEventListener("keyup", calculateTotal);
 rate.addEventListener("keyup", calculateTotal);
+  
